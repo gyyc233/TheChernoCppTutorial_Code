@@ -1,3 +1,12 @@
+//
+//  main5.cpp
+//  17-ConstructorsInCpp
+//
+//  Created by Remo Lazazzera on 25/01/2020.
+//  Copyright © 2020 Remo Lazazzera. All rights reserved.
+//
+
+#include <stdio.h>
 #include <iostream>
 
 class Entity{
@@ -9,21 +18,22 @@ class Entity{
         X = 0.0f;
         Y = 0.0f;
     }
+    
+    Entity(float x, float y){
+        X = x;
+        Y = y;
+    }
 /*
-The constructor is aparticular method that it gets called every time you construct an object. It doesn't have a return type and its name must match the name of the class. So I don't need the Init method anymore.
-If you don't specify a constructor C does it for you, it creates a default constructor but this defaul constructor is equivalent to
-    Entity(){} 
-it does nothing.
-In languages like Java primitive types like int or float are automatically initialized to 0, but this is not the case of C++; otherwise they will be set to whatever it was set in that memory.
+As for methods also for contructor I can declare different constructors with different loads and parameters in input
 */
     void Print(){
-        std::cout << X << ", " << Y << std::endl; 
+        std::cout << X << ", " << Y << std::endl;
     }
 };
 
 int main()
 {
-    Entity e;
+    Entity e(10.0f,50.0f);
     std::cout << e.X << std::endl;
     e.Print();
 

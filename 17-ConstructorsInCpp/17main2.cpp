@@ -5,6 +5,11 @@ class Entity{
     public:
         float X, Y;
 
+    void Init(){
+        X = 0.0f;
+        Y = 0.0f;
+    }
+
     void Print(){
         std::cout << X << ", " << Y << std::endl; 
     }
@@ -14,10 +19,8 @@ class Entity{
 int main()
 {
     Entity e;
+    e.Init();
     std::cout << e.X << std::endl;
-    /* 
-    Here I get an error message because the X in e has not been initialized
-    */
     e.Print();
 
     return 0;

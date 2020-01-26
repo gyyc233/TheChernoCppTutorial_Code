@@ -14,11 +14,11 @@ class Entity{
 int main()
 {
     Entity e;
-    std::cout << e.X << std::endl;
-    /* 
-    Here I get an error message because the X in e has not been initialized
-    */
+
     e.Print();
+    /*
+    Here X and Y are not initialized, just their memory has been allocated. So when I print I can find whetever it was present in that memory cell.
+    */
 
     return 0;
 }

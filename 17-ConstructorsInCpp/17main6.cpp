@@ -11,15 +11,21 @@
 
 
 /*
- If we use static methods of a class (like Wite in this example), the constructor won't run
+ If we use static methos of a class the constructor won't run
 */
 
 class Log{
     
-private:
-    Log(){}
-    
 public:
+    
+    Log() = delete;
+    
+    /* Here I deleted the constructor
+     so I can't instantiate Log: in fact
+     I've an error in declaring
+     Log l;
+     */
+    
     static void Write(){
         
     }
@@ -31,8 +37,4 @@ int main()
     Log::Write();
     Log l;
     
-    /*
-     Here I just want that people use Log::Write(); without creating an instance. However Cpp always create a constructor by default.
-     If the constructor is private, it can't be accessed so there is an error!
-     */
 }

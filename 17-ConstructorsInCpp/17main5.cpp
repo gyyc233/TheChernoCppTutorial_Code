@@ -9,33 +9,30 @@
 #include <stdio.h>
 #include <iostream>
 
-class Entity{
 
-    public:
-        float X, Y;
+/*
+ If we use static methods of a class (like Wite in this example), the constructor won't run
+*/
 
-    Entity(){
-        X = 0.0f;
-        Y = 0.0f;
+class Log{
+    
+private:
+    Log(){}
+    
+public:
+    static void Write(){
+        
     }
     
-    Entity(float x, float y){
-        X = x;
-        Y = y;
-    }
-/*
-As for methods also for contructor I can declare different constructors with different loads and parameters in input
-*/
-    void Print(){
-        std::cout << X << ", " << Y << std::endl;
-    }
 };
 
 int main()
 {
-    Entity e(10.0f,50.0f);
-    std::cout << e.X << std::endl;
-    e.Print();
-
-    return 0;
+    Log::Write();
+    Log l;
+    
+    /*
+     Here I just want that people use Log::Write(); without creating an instance. However Cpp always create a constructor by default.
+     If the constructor is private, it can't be accessed so there is an error!
+     */
 }
