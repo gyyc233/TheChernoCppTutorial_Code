@@ -31,7 +31,9 @@ class Entity{
 };
 
 void PrintEntity(const Entity& e){ /* I don't want to copy the Entity class in PrintEntity, 
-									I just want to pass its reference to PrintEntity class */
+									I just want to pass its reference to PrintEntity class 
+									Because I put const I can't change the contents of e 
+									*/
 	std::cout << e.GetX() << std::endl;
 };
 
