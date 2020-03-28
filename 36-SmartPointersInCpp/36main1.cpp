@@ -3,6 +3,9 @@ SHARED  work with reference counting: it keeps track
 of how many references you have to your pointer and when that reference get to 0, then the 
 pointer gets deleted.
 
+See Notes 66, on the Video BenchMarking to see the difference 
+in performance, between shared and unique pointers.
+
 */
 
 #include <iostream>

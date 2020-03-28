@@ -21,7 +21,7 @@ class Entity{
 			/*
 			Because in main I declared a const object, const object cans only access to const 
 			methods. For this reason if I want to use the GetName method from a const object of
-			the class Entity I've to put the first const in the method declaration
+			the class Entity I've to put the second const in the method declaration
 			The second const indicates that the method can't modify the class Entity members. 
 			So it can't modify m_Name
 			*/

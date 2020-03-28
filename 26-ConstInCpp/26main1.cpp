@@ -29,8 +29,6 @@ int main (){
 	const int* const c = new int; // Here I can't change enything
 	// int const* const c = new int; // Equivalent writing
 
-
-
 	return 0;
 }
 

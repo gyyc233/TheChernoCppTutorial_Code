@@ -1,0 +1,4 @@
+/*
+SINGLETONS in C++
+
+*/

@@ -24,6 +24,5 @@ int main (){
 
 	std::string str = e.GetName(); 
 
-
 	return 0;
 }
